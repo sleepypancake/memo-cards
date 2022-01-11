@@ -1,147 +1,183 @@
 export const MEMO_CARDS = [
     {
         id: 0,
-        color: 'green'
+        color: 'green',
+        matched: false,
     },
     {
         id: 1,
-        color: 'red'
+        color: 'red',
+        matched: false,
     },
     {
         id: 2,
-        color: 'blue'
+        color: 'blue',
+        matched: false,
     },
     {
         id: 3,
-        color: 'yellow'
+        color: 'yellow',
+        matched: false,
     },
     {
         id: 4,
-        color: 'orange'
+        color: 'orange',
+        matched: false,
     },
     {
         id: 5,
-        color: 'gray'
+        color: 'gray',
+        matched: false,
     },
     {
         id: 6,
-        color: 'violet'
+        color: 'violet',
+        matched: false,
     },
     {
         id: 7,
-        color: 'olive'
+        color: 'olive',
+        matched: false,
     },
     {
         id: 8,
-        color: 'aquamarine'
+        color: 'aquamarine',
+        matched: false,
     },
     {
         id: 9,
-        color: 'seagreen'
+        color: 'seagreen',
+        matched: false,
     },
     {
         id: 10,
-        color: 'darkslateblue'
+        color: 'darkslateblue',
+        matched: false,
     },
     {
         id: 11,
-        color: 'pink'
+        color: 'pink',
+        matched: false,
     },
     {
         id: 12,
-        color: 'deeppink'
+        color: 'deeppink',
+        matched: false,
     },
     {
         id: 13,
-        color: 'brown'
+        color: 'brown',
+        matched: false,
     },
     {
         id: 14,
-        color: 'dodgerblue'
+        color: 'dodgerblue',
+        matched: false,
     },
     {
         id: 15,
-        color: 'peru'
+        color: 'peru',
+        matched: false,
     },
     {
         id: 16,
-        color: 'yellowgreen'
+        color: 'yellowgreen',
+        matched: false,
     },
     {
         id: 17,
-        color: 'orangered'
+        color: 'orangered',
+        matched: false,
     },
     {
         id: 18,
-        color: 'orangered'
+        color: 'orangered',
+        matched: false,
     },
     {
         id: 19,
-        color: 'green'
+        color: 'green',
+        matched: false,
     },
     {
         id: 20,
-        color: 'red'
+        color: 'red',
+        matched: false,
     },
     {
         id: 21,
-        color: 'blue'
+        color: 'blue',
+        matched: false,
     },
     {
         id: 22,
-        color: 'yellow'
+        color: 'yellow',
+        matched: false,
     },
     {
         id: 23,
-        color: 'orange'
+        color: 'orange',
+        matched: false,
     },
     {
         id: 24,
-        color: 'gray'
+        color: 'gray',
+        matched: false,
     },
     {
         id: 25,
-        color: 'violet'
+        color: 'violet',
+        matched: false,
     },
     {
         id: 26,
-        color: 'olive'
+        color: 'olive',
+        matched: false,
     },
     {
         id: 27,
-        color: 'aquamarine'
+        color: 'aquamarine',
+        matched: false,
     },
     {
         id: 28,
-        color: 'seagreen'
+        color: 'seagreen',
+        matched: false,
     },
     {
         id: 29,
-        color: 'darkslateblue'
+        color: 'darkslateblue',
+        matched: false,
     },
     {
         id: 30,
-        color: 'pink'
+        color: 'pink',
+        matched: false,
     },
     {
         id: 31,
-        color: 'deeppink'
+        color: 'deeppink',
+        matched: false,
     },
     {
         id: 32,
-        color: 'brown'
+        color: 'brown',
+        matched: false,
     },
     {
         id: 33,
-        color: 'dodgerblue'
+        color: 'dodgerblue',
+        matched: false,
     },
     {
         id: 34,
-        color: 'peru'
+        color: 'peru',
+        matched: false,
     },
     {
         id: 35,
-        color: 'yellowgreen'
+        color: 'yellowgreen',
+        matched: false,
     },
     
 ]

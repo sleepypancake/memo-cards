@@ -1,50 +1,50 @@
 import React, { useEffect, useState } from 'react'
 import { MEMO_CARDS } from '../../constants/cards'
+import { useShuffleArray } from '../../utils/hooks/useShuffleArray'
 import { MemoCard } from './MemoCard/MemoCard'
 import styles from './MemoCards.module.scss'
 
 
 const MemoCardsComponent = (props) => {
     const [cards, setCards] = useState([])
-    const [match, setMatch] = useState([])
-    const [choiceOne, setChoiceOne] = useState({})
-    const [choiceTwo, setChoiceTwo] = useState({})
+    const [turns, setTurns] = useState(0)
+    const [choiceOne, setChoiceOne] = useState(null)
+    const [choiceTwo, setChoiceTwo] = useState(null)
 
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array
-      }
-    
+    const shuffledArr = useShuffleArray(MEMO_CARDS)
+
     useEffect(() => {
-        setCards(shuffle(MEMO_CARDS))
-    }, [])
+        setCards(shuffledArr)
+    }, [shuffledArr])
 
     const handleChoice = (card) => {
-        choiceOne.id ? setChoiceTwo(card) : setChoiceOne(card)
+        choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
     }
     // console.log('choiceOne', choiceOne)
     // console.log('choiceTwo', choiceTwo)
 
-    const matchCards = () => {
-        if (choiceOne.color === choiceTwo.color) {
-            setMatch(arr => {
-                const newArr = [...arr]
-                newArr.push([choiceOne.id, choiceTwo.id])
+    useEffect(() => {
+        if (choiceOne && choiceTwo) {
+            if (choiceOne.color === choiceTwo.color) {
+                // setMatch(arr => {
+                //     const newArr = [...arr]
+                //     newArr.push([choiceOne.id, choiceTwo.id])
+                //     resetChoices()
+                //     return newArr
+                // })
+                console.log('those cards match')
                 resetChoices()
-                return newArr
-            })
+            } else {
+                console.log('those cards do not match')
+                resetChoices()
+            }
         }
-    }
-
-
-    choiceTwo.id && matchCards()
-    console.log(match)
+    }, [choiceOne, choiceTwo])
+    
     const resetChoices = () => {
-        setChoiceOne({})
-        setChoiceTwo({})
+        setChoiceOne(null)
+        setChoiceTwo(null)
+        setTurns(prevTurns => prevTurns + 1)
     }
     return (
         <div className={styles.wrapper}>
@@ -53,7 +53,6 @@ const MemoCardsComponent = (props) => {
                     key={card.id}
                     card={card}
                     handleChoice={handleChoice}
-                    opens={card.id === choiceOne.id || card.id === choiceTwo.id} 
                 />
             ))}
         </div>
